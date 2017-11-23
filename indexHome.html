@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>MIXED</title>
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:700, 600,500,400,300' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100i,300,300i,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:400,700" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+        <link rel="stylesheet" href="mainHome.css">
+
+
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="https://code.highcharts.com/highcharts.js"></script>
+        <script src="https://code.highcharts.com/modules/data.js"></script>
+        <script src="mainHome.js"></script>
+
+        <script type="text/javascript">
+            $(function() {
+                $('.close').click(function() {
+                    $('.ad').css('display', 'none');
+                })
+            })
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <div class="conten">
+                <div class="buscador"><img src="imagenes/lupa.png" width="14px" alt="">
+                    <input type="text" class="escri" 
+                           name="Buscador" 
+                           value="Search" 
+                           onclick="if(this.value=='Search') this.value=''" 
+                           onblur="if(this.value=='') this.value='Search'"
+                           >
+                </div>
+
+                <div class="notifica">
+                    <a class="mensaje" href="#chat"><img class="mensa"  src="imagenes/Mensajes.png" alt="" width="25px"></a>
+                    <a class="mensaje" href="#">
+                        <img class="mensa" src="imagenes/Notificaciones.png" alt="" width="25px"></a>    
+                    <a class="mensaje" href="#"><img class="mensa" src="imagenes/Perfil.png" alt="" width="25px"></a>
+                </div>
+            </div>
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="" width="50px">
+            </div>
+            <a href="#" class="nav-trigger"><span></span></a>
+        </div>
+        <div class="side-nav" >
+            <div class="logo">
+                <img src="imagenes/logo.png" alt="" width="63px">
+            </div>
+            <nav>
+                <ul>
+                    <li >
+                        <a href="#">
+                            <span><img src="imagenes/Home.png" alt="" width="60%"></span>
+
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Outfit/indexOutfit.html">
+
+                            <span><img src="imagenes/Descuentos.png" alt="" width="60%"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="Manchester/index.html">
+                            <span><img src="imagenes/Planes.png" alt="" width="60%"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+
+                            <span><img src="imagenes/Amigos.png" alt="" width="60%"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+
+                            <span><img src="imagenes/Ajustes.png" alt="" width="60%"></span>
+                        </a>
+                    </li>
+                    <li class="salir">
+                        <a href="#">
+
+                            <span><img src="imagenes/LogOut.png" alt="" width="60%"></span>
+                        </a>
+                    </li>
+
+                </ul>
+            </nav>
+        </div>
+
+        <div class="main-content">
+            <!--  ESTE ES EL   CHAT-->
+            <div class="modal-wrapper" id="chat">
+                <div class="chat-contenedor">
+                    <div class="lateral">
+                        <div class="panel">
+                            <div class="yo">
+                                <div class="img-perfil">
+                                    <img src="imagenes/img-perfil.png" alt="" width="68px">
+                                </div>
+                                <div class="mi-perfil"> 
+                                    <div><h1 class="name">Ilian Londoño</h1><h2 class="lugar">Cali,Co</h2>
+                                        <div class="edita-perfil">Editar perfil</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buscha">
+                                <div class="busca-chat">
+                                    <img src="imagenes/lupa.png" width="14px" alt="">
+                                    <input type="text" class="escrichat" 
+                                           name="Buscador" 
+                                           value="Buscar chat" 
+                                           onclick="if(this.value=='Buscar chat') this.value=''" 
+                                           onblur="if(this.value=='') this.value='Buscar chat'"
+                                           >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lista">   
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Juan.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Juan Perez</div>
+                                    <div class="premensaje"><img src="imagenes/escribiendo.png" alt="" width="22px;"></div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> 1:32 PM</div>
+                                    <div class="numnoti"> </div>
+                                </div>
+                            </div>
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Hayami.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Hayami Hiroto</div>
+                                    <div class="premensaje">Conoces  Japón?...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> Ayer</div>
+                                    <div class="numnoti"> <img src="imagenes/hayaminoti.png" alt="" width="15px"></div>
+                                </div>
+                            </div>
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Daniela.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Daniela_G.</div>
+                                    <div class="premensaje">Ilian. Vamos...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> Lunes</div>
+                                    <div class="numnoti"> <img src="imagenes/danielanoti.png" alt="" width="15px"></div>
+                                </div>
+                            </div>
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Ekaterina.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Ekaterina Vólkov</div>
+                                    <div class="premensaje">Me gusta los...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> 15 Oct.</div>
+                                    <div class="numnoti"> <img src="imagenes/Ekaterinanoti.png" alt="" width="15px"></div>
+                                </div>
+                            </div>
+
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Camila.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Camila Arias</div>
+                                    <div class="premensaje">Tambien eres de...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> 10 Oct.</div>
+                                    <div class="numnoti"> <img src="imagenes/Camilanoti.png" alt="" width="10px"></div>
+                                </div>
+                            </div>
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Aaminah.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Aaminah Sayyid</div>
+                                    <div class="premensaje">Me gusta esc...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> 10 Oct.</div>
+                                    <div class="numnoti"> <img src="imagenes/Aaminahnoti.png" alt="" width="12px"></div>
+                                </div>
+                            </div>
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Akihiro.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Akihiro Natsuki</div>
+                                    <div class="premensaje">De donde eres?...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> 9 Oct.</div>
+                                    <div class="numnoti"> </div>
+                                </div>
+                            </div>
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Kumi.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Kumi Yoko</div>
+                                    <div class="premensaje">Hola! Como estas?...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> 9 Oct.</div>
+                                    <div class="numnoti">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Aaminah.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Daniel Corrales</div>
+                                    <div class="premensaje">Ilian. que haces?...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> 8 Oct.</div>
+                                    <div class="numnoti"> </div>
+                                </div>
+                            </div>
+
+                            <div class="personalista">
+                                <div class="fotperfil">
+                                    <img src="imagenes/Camila.png" alt="" width="35px">
+                                </div>
+                                <div class="centro">
+                                    <div class="nombrePersona">Manuela Epe</div>
+                                    <div class="premensaje">Donde estas?...</div>
+                                </div>
+                                <div class="dere">
+                                    <div class="horamensa"> 8 Oct.</div>
+                                    <div class="numnoti"> <img src="imagenes/hayaminoti.png" alt="" width="15px"></div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="persona">
+                        <div class="arriba">
+                            <div class="cerrar">
+                                <div class="superior">
+                                    <div class="fotochat"><img src="imagenes/fotochat.png" alt="" width="40px"></div>
+                                    <div><h1 class="nameAmi">Juan Perez</h1><h2 class="lugarAmi">Cali,Co</h2>
+                                    </div>
+                                </div>
+                                <a class="chat-cerrar" href="#">X</a>
+                                <div class="anteriores">Ver mensajes anteriores...</div>
+                            </div>
+
+                        </div>
+                        <div class="chatea">
+                            <div class="fondo"><img src="imagenes/chat.png" alt="" width="580px"></div>
+                            <div class="send">
+
+                                <div class="enviamensa">
+                                    <input type="text" class="esc-mensaje" 
+                                           name="chateador" 
+                                           value="Escribe algo" 
+                                           onclick="if(this.value=='Escribe algo') this.value=''" 
+                                           onblur="if(this.value=='') this.value='Escribe algo'"
+                                           >
+                                    <div class="options">
+                                        <img class="opt" src="imagenes/Galeria.png" alt="" width="15px">
+                                        <img class="opt" src="imagenes/Camara.png" alt="" width="15px">
+                                        <img class="opt" src="imagenes/NotaVoz.png" alt="" width="10px"></div>
+                                </div>
+                                <div class="bot-envia">
+                                    <img src="imagenes/boton-enviar.png" alt="" width="30px">
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--  AQUI TERMINA EL   CHAT-->
+            <div class="container">
+                <img src="imagenes/manchester.png" alt="" width="100%" height="40%" class="image">
+                <div class="degracity"></div>
+                <div class="ciudad">MANCHESTER, UK</div><div class="like"><img id="corazon" src="imagenes/Like.png" alt="" width="20px"></div></div>
+
+            <!--			<div class='ad'>
+<div class="close">
+<i class="ion-ios-close-empty"></i>
+</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+kodhus demos 
+<ins class="adsbygoogle"
+style="display:inline-block;width:300px;height:250px"
+data-ad-client="ca-pub-8408356133845039"
+data-ad-slot="8154430505"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+</div>-->
+            <h1 class="titulo">Top plans to do in Manchester</h1>
+            <div class="main">
+                <!--<div class="izq">
+<img src="imagenes/izq.png" alt="" width="20px">
+</div>-->
+                <div class="uno">
+                    <h1 class="plan">HISTORY MUSEUM</h1><p><br />
+                    <small>The People's History Museum (the National Museum of Labour History until 2001) in Manchester, England, is the United Kingdom's national centre for the collection, conservation, interpretation and study of material relating to the history of working people in the UK. </small></p>
+                </div>
+                <div class="dos">
+                    <h1 class="plan">MANCHESTER UNITED</h1><p><br />
+                    <small>Old Trafford is a football stadium in Old Trafford, Greater Manchester, England, and the home of Manchester United. It is the largest club football stadium in the United Kingdom. It is about 0.5 miles (800 m) from Old Trafford Cricket Ground and the adjacent tram stop.</small></p>
+                </div>
+
+                <div class="tres">
+                    <h1 class="plan">COMEDY</h1><p><br />
+                    <small>The Manchester Store is the only venue of its type in the country, with a 500 seat theatre-style auditorium, spacious public bar, dining area, VIP Ward Room and the Store’s offices occupying two converted railway arches in the £14m development.</small></p>
+                </div>
+                <div class="cuatro">
+                    <h1 class="plan">PUBS</h1><p><br />
+                    <small>The funniest pub tours in the country, absurd yet factual roller-coasters slurping across two hundred years of Manchester's drinking history. Daft quiz with few questions and but great prizes to follow. </small></p>
+                </div>
+                <!--<div class="der">
+<img src="imagenes/der.png" alt="" width="20px">
+</div>-->
+            </div>
+            <div class="botonmasplanes"> <a class="masplanes" href="Manchester/index.html">See more plans</a></div>
+
+            <div class="container">
+                <img  src="imagenes/veneciac.jpg" alt="" width="100%"  class="image">
+                <div class="degracity"></div>
+                <div class="ciudad">VENECI, IT</div><div class="like"><img id="corazon" src="imagenes/Like.png" alt="" width="20px"></div></div>
+
+            <h1 class="titulo">Top plans to do in Venice</h1>
+            <div class="main">
+                <div class="cinco">
+                    <h1 class="plan">BOAT TRIP</h1><p><br />
+                    <small>Enjoy Venice from a privileged view of a Gondola accompanied by its gentle movement. Take a ride along Canal Grande and minor canals around San Marco square and Rialto.</small></p>
+                </div>
+                <div class="seis">
+                    <h1 class="plan">DOGE'S PALACE</h1><p><br />
+                    <small>Explore the exquisite city of Venice on a 2-hour walking tour that covers the most significant highlights of St. Mark’s Square, with entrance to the Doge's Palace and St. Mark's Basilica.</small></p>
+                </div>
+                <div class="siete">
+                    <h1 class="plan">VENECI LIDO</h1><p><br />
+                    <small>The island’s northern tip—the actual Lido—is home to the Film Festival, a couple of stylish hotels, the Venice Casino and a host of delicious restaurants and nightlife spots. Travelers can also find two large public beaches perfect for relaxing under the sun alongside the Adriatic. </small></p>
+                </div>
+                <div class="ocho">
+                    <h1 class="plan">LAGOON FISHING</h1><p><br />
+                    <small>Climb aboard a stylish Bora Cruiser boat for a 4-hour tour of the Venice Lagoon. Go to the fishing villages of the southern lagoon, away from the crowds. Look out for the local birdlife, and pass picturesque spots like Malamocco.</small></p>
+                </div>
+            </div>
+            <div class="botonmasplanes"><div class="masplanes">See more plans</div></div>
+        </div>
+    </body>
+</html>

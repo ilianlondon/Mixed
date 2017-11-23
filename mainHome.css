@@ -1,0 +1,1486 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #ededed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.header {
+    position: fixed;
+    display: block;
+    width: 100%;
+    z-index: 3;
+    height: 40px;
+    background-color: #233245;
+}
+
+
+.escri{
+    padding-left: 15px;
+    color: rgba(60,60,60,.43);
+    border:0;
+    text-decoration: none;
+    width: 90%;
+    height: 25px;
+}
+
+.buscador{
+    background-color: white;
+    width: 100%;
+    height: 28px;
+    border-radius: 20px;
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: center;
+
+}
+
+.conten{
+    width: 100%; 
+    padding-left: 5%;
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.notifica{
+    order: 0;
+    flex: 0 1 auto;
+    align-self: auto; 
+    margin-right: 25px;
+}
+.mensaje{
+    padding-left: 40px;
+}
+
+.mensa:hover{
+    background-color: #233245;
+    border-radius: 8px;
+    width: 50px;
+    padding: 4px;
+}
+
+.buscador a{
+    color: rgba(60,60,60,0.43);
+    font-size: 14px;
+    text-decoration: none;
+    padding-left: 15px;
+}
+
+
+/* main box container */
+.main {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.plan {
+    width: 100%;
+    color: rgba(255,255,255,1);
+    background: black;
+    background: linear-gradient(bottom, rgba(0,0,0,.8), rgba(0,0,0,0.05));
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,.8), rgba(0,0,0,.05));
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,.8), rgba(0,0,0,.05));
+    padding: 15px 15px;
+    line-height: 20px;
+    font-size: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    /*    font-family: 'Roboto', sans-serif; */
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    height: 120px;
+    transition: height .5s;
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+}
+
+p {
+    width: 100%;
+    color: rgba(255,255,255,1);
+    opacity: 0;
+    padding: 25px 15px;
+    line-height: 14px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    text-align: justify;
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+    height: 120px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    transition: height .5s;
+    -webkit-transition: height .5s;
+    -moz-transition: height .5s;
+}
+p:hover{
+    height: 120px;
+    opacity: 1;
+}
+small {
+    opacity: 1;
+}
+.uno, .dos, .tres, .cuatro, .cinco, .seis, .siete, .ocho {
+    flex-basis: 250px;
+    flex-grow: 15;
+    width: 100%;
+    height: 250px;
+    margin: 15px;
+    border-radius: 6px;
+    position: relative;
+    background-size: 100%;
+}
+.uno {
+    background-image: url(imagenes/history.png);
+}
+.dos {
+    background-image: url(imagenes/dosc.png);
+}
+.tres {
+    background-image: url(imagenes/tresc.png);
+}
+.cuatro {
+    background-image: url(imagenes/cuatroc.png);
+}
+.cinco {
+    background-image: url(imagenes/cincoc.png);
+}
+.seis {
+    background-image: url(imagenes/seisc.png);
+}
+.siete {
+    background-image: url(imagenes/sietec.png);
+}
+.ocho {
+    background-image: url(imagenes/ochoc.png);
+}
+
+.salir{
+    margin-top: 15vh;
+}
+
+
+.titulo{
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 15px;
+    color: #7a7a7a;
+    padding: 15px;
+}
+
+.show-description p {
+    height: 150px;
+}
+
+.show-description small {
+    opacity: 1;
+}
+.botonmasplanes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+.masplanes {
+    height: 56px;
+    width: 280px;
+    background-color: rgba(0,176,183,0.8);
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 15px;
+    font-size: 20px;
+    text-decoration: none;
+}
+.masplanes:hover{
+    background-color: rgba(114,118,220,.8);
+}
+
+.izq{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0 0 0 15px 
+}
+.der{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0 15px 0 0; 
+}
+
+@media (max-width: 600px) {
+    .buscador{
+        display: none;       
+    }
+}
+
+/*
+.foto{
+padding-top: 100px;
+width:100%;
+height: 300px;
+background-position: bottom;
+background-size: cover;
+background-image: url(imagenes/manchester.png);
+}
+.foto:hover{
+background-image: url(imagenes/man1.png);
+}
+*/
+
+
+/* logo in header(mobile version) and side-nav (tablet & desktop) */
+
+.logo {
+    height: 40px;
+    display: flex;  
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+.ciudad{
+    position: absolute;
+    font-size: 150%;
+    font-family: 'Rubik', sans-serif;
+    font-weight: bold;
+    color: white;
+    bottom: 8%;
+    margin-left: 15px;
+
+}
+.like{
+    height: 20%;
+    position: absolute;
+    bottom: 1%;
+    right: 5%;
+}
+#corazon:hover{
+    content: url(imagenes/Like2.png);
+    padding-bottom: 10px;
+}
+
+.side-nav .logo {
+    background-color: #233245;
+    color: red;
+}
+
+
+.nav-trigger {
+    position: relative;
+    float: right;
+    right: 40px;
+    bottom: 22px;
+}
+.nav-trigger span, .nav-trigger span:before, span:after {
+    width: 20px;
+    height: 2px;
+    background-color: white;
+    position: absolute;
+}
+
+.nav-trigger span:before, .nav-trigger span:after {
+    content: '';
+}
+.nav-trigger span:before {
+    top: -6px;
+}
+.nav-trigger span:after {
+    top: 6px;
+}
+/* side navigation styles */
+.side-nav {
+    position: absolute;
+    width: 97px;
+    height: 100vh;
+    background-color: #EA3F4C;
+    z-index: 1;
+    display: none;
+    position: fixed;
+}
+.side-nav.visible {
+    display: block;
+}
+.side-nav ul {
+    margin: 0;
+    padding: 0;
+
+}
+.side-nav ul li {
+    padding: 32px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+
+}
+.side-nav ul li:hover {
+    background-color: #E22D43;
+
+}
+
+.side-nav ul li a {
+    color: #fff;
+    display: block;
+    text-decoration: none;
+}
+
+.side-nav ul li span:nth-child(2) {
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px;
+}
+/* main content styles */
+
+.buscador, .notifica{
+    display: none;
+}
+.main-content {
+    padding: 0px;
+    margin-top: 0;
+    padding: 0;
+    padding-top: 40px;
+}
+.container{
+    padding: 0px;
+    margin-top: 0;
+    position: relative;
+}
+
+
+.degracity{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: rgba(255,255,255,1);
+    background: black;
+    background: linear-gradient(bottom, rgba(0,0,0,.8), rgba(0,0,0,0.03));
+    background: -webkit-linear-gradient(bottom, rgba(0,0,0,.5), rgba(0,0,0,0));
+    background: -moz-linear-gradient(bottom, rgba(0,0,0,.5), rgba(0,0,0,.03));
+}
+
+.image{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: 200px;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+/* POP-UPCHAT Movil Movil Movil Movil Movil */
+#chat {
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -300px;
+    position: fixed;
+}
+
+#chat:target {
+    visibility:visible;
+    opacity: 1;
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:0;
+    z-index: 999;
+    transition:all 1s;
+}
+.chat-contenedor {
+    position: relative;
+    margin: 40px 0;
+    background-color: #fafafa;
+    color:#333;
+    border-radius: 6px;
+    width:100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+}
+a.chat-cerrar {
+    position: fixed;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    background: #7276dccc;
+    border-radius: 20px;
+    font-size: 14px;
+    text-decoration: none;
+    font-weight: 400;
+    line-height: 1;
+    color:#ccc;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    z-index: 5;
+}
+a.chat-cerrar:hover{
+    background: #00b0b7cc; 
+}
+.lateral{
+    display: none;
+}
+.persona{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+}
+.panel{
+    width: 100%;
+    height: 140px;
+    background: #fff;
+}
+.yo{
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-start;
+}
+.edita-perfil{
+    width: 125px;
+    height: 25px;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    color: #fff;
+    background: #7276dccc;
+    border-radius: 15px;
+}
+.edita-perfil:hover{
+    background: #00b0b7cc;
+}
+.buscha{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: center;
+
+}
+.busca-chat{
+    background-color: #fff;
+    width: 200px;
+    height: 25px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    padding-left: 5px;
+    border: 1.5px solid #ddd;   
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-content: stretch;
+    align-items: center;
+
+}
+.escrichat{
+    width: 78%;
+    height: 23px;
+    color: rgba(60,60,60,.43);
+    border:0;
+    text-decoration: none;
+}
+.lista{
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+}
+.name{
+    color: #ec3f4c;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 8px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+
+.lugar {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #ec3f4c;
+    font-weight: lighter;
+    line-height: 6px;
+    padding-bottom: 5px;
+}
+.nameAmi{
+    color: #fff;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 14px;
+    line-height: 8px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+
+.lugarAmi {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    font-weight: lighter;
+    line-height: 6px;
+    padding-bottom: 5px;
+}
+.cerrar{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: stretch;
+    align-items: center;
+    background: #ea3f4c;
+    width: 100%;
+    height: 60px;
+}
+
+.arriba{
+    display: block;
+    width: 100%;
+    height: 60px;
+}
+
+.superior {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;   
+}
+.anteriores{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 160px;
+    height: 25px;
+    background: rgba(114, 118, 220, 0.8);
+    font-size: 12px;
+    font-family: 'PT Sans', sans-serif;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+    color: white;
+    left: 30%;
+    top: 60px;
+    z-index: 10;
+}
+.anteriores:hover{
+    background: rgba(0, 176, 183, 0.8);
+}
+.fotochat{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    padding: 0 15px 0 10px;
+}
+.chatea{
+    width: 100%;
+    height: 100vh;
+    display: inline-block;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: stretch;
+    align-items: center;
+}
+
+.fondo{
+    position: relative;
+    background: #fff;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-start;
+}
+
+.send{
+    background: #ea3f4c;
+    position:  fixed;
+    bottom: 0;
+    z-index: 3;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+
+.enviamensa{
+    padding-left: 5px;
+    margin-left: 20px;
+    height: 25px;
+    background: rgba(255, 255, 255, .35);
+    width: 70%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+}
+.options{
+    margin: 0 10px 0 0;
+}
+.opt{
+    margin: 5px;
+}
+.esc-mensaje{
+    background:rgba(255,255,255,.0);
+    width: 55%;
+    border:0;
+    font-size: 12px;
+    font-weight: 200;
+    padding-left: 15px;
+    color: #fff;
+
+}
+.bot-envia{
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    right: 10px;
+}
+.img-perfil{
+    padding: 10px;
+}
+.personalista{
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: center;
+    padding-bottom: 2px;
+
+}
+.personalista:hover{
+    background: rgba(0, 176, 183, 0.1);
+}
+.fotperfil{
+    padding-left: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: center;
+}
+.dere{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-content: stretch;
+    align-items: flex-end;
+    margin-right: 10px;
+    width: 25%;
+}
+.centro{
+    width: 65%;
+    margin: 0 10px;
+}
+.horamensa{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: stretch;
+    align-items: flex-end;
+    text-align: right;
+    font-size: 10px;
+    font-family: 'PT Sans', sans-serif;
+    margin-bottom: 5px;
+    color: #a3a3a3;
+}
+.nombrePersona{
+    padding-top: 5px;
+    color: #a3a3a3;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+}
+.premensaje{
+    padding-bottom: 14px;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif; 
+    color: #a3a3a3;
+}
+.linea{
+    width: 80%;
+    margin-left: 10%;
+    background: #ccc;
+    height: 0.5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-content: center;
+    align-items: flex-end;
+
+}
+.numnoti{
+    width: 30px;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    align-content: center;
+    align-items: center;
+    padding-bottom: 5px;
+}
+/* POP-UPCHAT Movil Movil Movil Movil Movil Movil Movil*/
+
+/* set element styles to fit tablet and higher(desktop) */
+@media screen and (min-width: 600px) {
+
+
+    /* POP-UPCHAT */
+    .chat-contenedor{
+        margin: 70px 97px;
+    }
+    .image{
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: 200px;
+        transition: .5s ease;
+        backface-visibility: hidden;
+    }
+
+
+    .side-nav {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-color: #EA3F4C;
+        z-index: 1;
+        display: none;
+        position: fixed;
+    }
+    .side-nav ul li {
+        padding: 16px 16px;
+
+        position: relative;
+    }
+    .ciudad{
+        font-size: 40px;
+    }
+
+    #corazon{
+        width: 32px;
+    }
+
+    .like{
+        bottom: 10%;
+    }
+
+    .logo{
+        height: 70px;
+    }
+    .header {
+        background-color: #35475e;
+        padding-left: 97px;
+        z-index: 1;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .buscador, .notifica{
+        display: block;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+    }
+    .header{
+        height: 70px;
+    }
+
+    .header .logo {
+        display: none;
+    }
+    .nav-trigger {
+        display: none;
+    }
+    .nav-trigger span, .nav-trigger span:before, span:after {
+        background-color: #fff;
+    }
+    .side-nav {
+        display: block;
+        width: 97px;
+        z-index: 2;
+    }
+    .side-nav ul li span:nth-child(2) {
+        display: none;
+    }
+    .side-nav .logo i {
+        padding-left: 12px;
+    }
+    .side-nav .logo span {
+        display: none;
+    }
+    .side-nav ul li {
+        padding: 30px 0;
+    }
+    .side-nav ul li a {
+        text-align: center;
+
+    }
+    .main-content {
+        margin-left: 97px;
+    }
+    .nav span {
+        width: 10px;
+        height: 10px
+    }
+
+    .main-content{
+        padding-top: 70px;
+    }
+    .titulo{
+        font-size: 20px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+    /* POP-UPCHAT  600 600 600 600 600 600 600 600 600 600*/
+
+
+    #chat {
+        visibility: hidden;
+        opacity: 0;
+        margin-top: -300px;
+        position: fixed;
+    }
+
+    #chat:target {
+        visibility:visible;
+        opacity: 1;
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        bottom:0;
+        margin:0;
+        z-index: 999;
+        transition:all 1s;
+    }
+    .chat-contenedor {
+        margin: 70px 0;
+        width:100%;
+        height: 100vh;
+    }
+    .lateral{
+        width: 300px;
+        height: 100vh;
+        border-radius: 6px 0 0 6px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-start;
+    }
+
+    .panel{
+        width: 100%;
+        height: 140px;
+        background: #fff;
+    }
+
+    .edita-perfil{
+        width: 80px;
+        height: 20px;
+        font-size: 10px;
+    }
+
+    .busca-chat{
+        width: 180px;
+        height: 25px;
+        margin-bottom: 20px;
+    }
+    .escrichat{
+        width: 70%;
+        height: 22px;
+    }
+    .lista{
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+    }
+    .name{
+        font-size: 12px;
+    }
+
+    .lugar {
+        font-size: 10px;
+    }
+
+    .anteriores{
+        width: 160px;
+        height: 25px;
+        font-size: 12px;
+        left: 50%
+    }
+
+
+    .fondo{
+        width: 120%;
+    }
+
+    .enviamensa{
+        padding-left: 5px;
+        margin-left: 20px;
+        height: 25px;
+        width: 50%;
+    }
+    .esc-mensaje{
+        background:rgba(255,255,255,.0);
+    width: 70%;
+    border:0;
+        font-size: 12px;
+        font-weight: 200;
+        padding-left: 15px;
+
+    }
+    .options{
+    margin: 0 10px 0 0;
+}
+.opt{
+    margin: 5px;
+}
+    .bot-envia{
+        position: fixed;
+        padding: 10px;
+        bottom: 0;
+        right: 10px;
+    }
+    .img-perfil{
+        padding: 10px;
+    }
+    .personalista{
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+        padding-bottom: 2px;
+
+    }
+    .personalista:hover{
+        background: rgba(0, 176, 183, 0.1);
+    }
+    .fotperfil{
+        padding-left: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: center;
+    }
+    .dere{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-end;
+        margin-right: 10px;
+        width: 25%;
+    }
+    .centro{
+        width: 65%;
+        margin: 0 10px;
+    }
+    .horamensa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: flex-end;
+        text-align: right;
+        font-size: 10px;
+        font-family: 'PT Sans', sans-serif;
+        margin-bottom: 5px;
+        color: #a3a3a3;
+    }
+    .nombrePersona{
+        padding-top: 5px;
+        font-size: 12px;
+    }
+    .premensaje{
+        padding-bottom: 14px;
+        font-size: 10px;
+    }
+
+    .numnoti{
+        width: 25px;
+        height: 25px;
+    }
+    /* POP-UPCHAT 600 600 600 600 600 600 600 600 600 600 600 600*/
+}
+
+/* set element styles for desktop */
+@media screen and (min-width: 800px) {
+    .side-nav {
+        width: 97px;;
+    }
+    .side-nav ul li span:nth-child(2) {
+        display: inline-block;
+    }
+    .side-nav ul li i {
+        font-size: 16px;
+    }
+    .side-nav ul li a {
+        text-align: center;
+    }
+    .side-nav .logo i {
+        padding-left: 0;
+    }
+    .side-nav .logo span {
+        display: inline-block;
+    }
+    .main-content {
+        margin-left: 97px;
+    }
+    .like{
+        bottom: 1%;
+    }
+    .buscador{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: center;
+        align-items: center;
+    }
+    .image{
+        height: 30vh;
+    }
+    /* POP-UPCHAT 800 800 800 800 800 800 800 */
+
+    .chat-contenedor {
+        margin: 70px 0;
+        width:100%;
+        height: 100vh;
+    }
+    a.chat-cerrar {
+        right: 10px;
+        width: 25px;
+        height: 25px;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1;
+    }
+
+    .lateral{
+        width: 292px;
+        height: 100vh;
+        border-radius: 6px 0 0 6px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-start;
+    }
+    .persona{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-start;
+    }
+    .panel{
+        width: 100%;
+        height: 140px;
+        background: #fff;
+    }
+    .yo{
+        display: inline-flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-start;
+    }
+    .edita-perfil{
+        width: 115px;
+        height: 25px;
+        text-align: center;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 12px;
+    }
+
+    .busca-chat{
+        width: 180px;
+        height: 25px;
+
+    }
+    .escrichat{
+        width: 78%;
+        height: 23px;
+    }
+    .lista{
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+    }
+    .name{
+        color: #ec3f4c;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 14px;
+        line-height: 8px;
+        font-weight: 500;
+        padding-top: 5px;
+    }
+
+    .lugar {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        color: #ec3f4c;
+        font-weight: lighter;
+        line-height: 6px;
+        padding-bottom: 5px;
+    }
+    .nameAmi{
+        color: #fff;
+        font-family: 'PT Sans', sans-serif;
+        font-size: 14px;
+        line-height: 8px;
+        font-weight: 500;
+        padding-top: 5px;
+    }
+
+    .lugarAmi {
+        font-family: 'Roboto', sans-serif;
+        font-size: 12px;
+        color: #fff;
+        font-weight: lighter;
+        line-height: 6px;
+        padding-bottom: 5px;
+    }
+    .cerrar{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: stretch;
+        align-items: center;
+        background: #ea3f4c;
+        width: 100%;
+        height: 60px;
+    }
+
+    .arriba{
+        display: block;
+        width: 100%;
+        height: 60px;
+    }
+
+    .superior {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: center;   
+    }
+    .anteriores{
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        width: 175px;
+        height: 30px;
+        background: rgba(114, 118, 220, 0.8);
+        font-size: 14px;
+        font-family: 'PT Sans', sans-serif;
+        text-align: center;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        color: white;
+        left: 50%;
+        top: 60px;
+        z-index: 10;
+    }
+    .anteriores:hover{
+        background: rgba(0, 176, 183, 0.8);
+    }
+    .fotochat{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+        padding: 0 15px 0 10px;
+    }
+    .chatea{
+        width: 100%;
+        height: 100vh;
+        display: inline-block;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-content: stretch;
+        align-items: center;
+    }
+
+    .fondo{
+        background: #fff;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .send{
+        background: #ea3f4c;
+        position:  fixed;
+        bottom: 0;
+        z-index: 3;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+
+    .enviamensa{
+        padding-left: 5px;
+        margin-left: 20px;
+        height: 25px;
+        background: rgba(255, 255, 255, .35);
+        width: 62%;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-content: center;
+        align-items: center;
+    }
+    .esc-mensaje{
+        background:rgba(255,255,255,.0);
+    width: 80%;
+    border:0;
+        font-size: 12px;
+        font-weight: 200;
+        padding-left: 15px;
+        color: #fff;
+
+    }
+    
+    .options{
+    margin: 0 10px 0 0;
+}
+.opt{
+    margin: 5px;
+}
+    .bot-envia{
+        position: fixed;
+        padding: 10px;
+        bottom: 0;
+        right: 10px;
+    }
+    .img-perfil{
+        padding: 10px;
+    }
+    .personalista{
+        width: 100%;
+        height: 50px;
+        background: #fff;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: center;
+        padding-bottom: 2px;
+
+    }
+    .personalista:hover{
+        background: rgba(0, 176, 183, 0.1);
+    }
+    .fotperfil{
+        padding-left: 15px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: center;
+    }
+    .dere{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: flex-end;
+        margin-right: 10px;
+        width: 25%;
+    }
+    .centro{
+        width: 65%;
+        margin: 0 10px;
+    }
+    .horamensa{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: stretch;
+        align-items: flex-end;
+        text-align: right;
+        font-size: 10px;
+        font-family: 'PT Sans', sans-serif;
+        margin-bottom: 5px;
+        color: #a3a3a3;
+    }
+    .nombrePersona{
+        padding-top: 5px;
+        color: #a3a3a3;
+        font-size: 16px;
+        font-family: 'PT Sans', sans-serif;
+    }
+    .premensaje{
+        padding-bottom: 14px;
+        font-size: 12px;
+        font-family: 'Roboto', sans-serif; 
+        color: #a3a3a3;
+    }
+    .linea{
+        width: 80%;
+        margin-left: 10%;
+        background: #ccc;
+        height: 0.5px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: flex-end;
+
+    }
+    .numnoti{
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-end;
+        align-content: center;
+        align-items: center;
+        padding-bottom: 5px;
+    }
+    /* POP-UPCHAT 800 800 800 800 800 800 800 800 800 800*/
+}
+
+
